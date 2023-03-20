@@ -1,0 +1,16 @@
+{
+  "name": "component-library",
+  "packageManager": "yarn@3.5.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": "18.x",
+    "yarn": "3.x"
+  },
+  "volta": {
+    "node": "18.15.0",
+    "yarn": "3.5.0"
+  }
+}
