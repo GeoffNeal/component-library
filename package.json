@@ -1,10 +1,15 @@
 {
-  "name": "component-library",
+  "name": "@GeoffNeal/component-library",
   "packageManager": "yarn@3.5.0",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "build": "turbo run --concurrency=4 build",
+    "release": "yarn build && changeset publish",
+    "version": "changeset version && yarn install"
+  },
   "engines": {
     "node": "18.x",
     "yarn": "3.x"
@@ -12,5 +17,8 @@
   "volta": {
     "node": "18.15.0",
     "yarn": "3.5.0"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.0"
   }
 }
