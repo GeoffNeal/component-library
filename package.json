@@ -7,8 +7,14 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo 'TODO: Add tests'",
+    "test": "turbo run --concurrency=4 test",
+    "test:ci": "turbo run --concurrency=2 test -- --maxWorkers=2 --forceExit",
     "build": "turbo run --concurrency=4 build",
+    "clean": "turbo run clean",
+    "coverage": "turbo run --concurrency=4 coverage",
+    "coverage:ci": "turbo run --concurrency=2 coverage -- --maxWorkers=2 --forceExit",
+    "format": "turbo run --concurrency=4 format",
+    "lint": "turbo run --concurrency=4 lint",
     "release": "yarn build && changeset publish",
     "version": "changeset version && yarn install",
     "postinstall": "husky install"
@@ -27,6 +33,7 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/config-lerna-scopes": "^17.4.2",
     "@manypkg/cli": "^0.20.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "turbo": "^1.8.3"
   }
 }
