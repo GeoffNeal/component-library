@@ -1,5 +1,5 @@
 {
-  "name": "@GeoffNeal/component-library",
+  "name": "@geoffneal/component-library",
   "version": "0.1.0",
   "packageManager": "yarn@3.5.0",
   "private": true,
@@ -25,9 +25,8 @@
     "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "@commitlint/config-lerna-scopes": "^17.4.2"
-  },
-  "devDependencies": {
+    "@commitlint/config-lerna-scopes": "^17.4.2",
+    "@manypkg/cli": "^0.20.0",
     "husky": "^8.0.0"
   }
 }
